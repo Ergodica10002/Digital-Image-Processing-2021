@@ -128,7 +128,7 @@ for i in range(1, height-1):
 							KEEP = 1
 				if KEEP == 0:
 					break
-			#cv2.imwrite("def2_remove_{}.png".format(count), G0)
+			#cv2.imwrite("removed_object/def2_remove_{}.png".format(count), G0)
 			for k in range(1, height-1):
 				for l in range(1, width-1):
 					if G0[k,l] == 255:
