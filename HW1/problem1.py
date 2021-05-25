@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-sample1_img = cv2.imread('sample1.jpg')
+sample1_img = cv2.imread('hw1_sample_images/sample1.jpg')
 imgInfo = sample1_img.shape
 height = imgInfo[0]
 width = imgInfo[1]
@@ -19,5 +19,5 @@ for i in range(0,height):
     for j in range(0,width):
         flip_img[i,j] = sample1_img[i, width-j-1]
 
-cv2.imwrite('1_result.jpg', gray_img)
-cv2.imwrite('2_result.jpg', flip_img)
+cv2.imwrite('hw1_result_images/1_result.jpg', gray_img)
+cv2.imwrite('hw1_result_images/2_result.jpg', flip_img)

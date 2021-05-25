@@ -3,7 +3,7 @@ import cv2
 from matplotlib import pyplot as plt
 import math
 
-sample1_img = cv2.imread("sample1.jpg")
+sample1_img = cv2.imread("hw2_sample_images/sample1.jpg")
 img_info = sample1_img.shape
 height = img_info[0]
 width = img_info[1]
@@ -39,7 +39,7 @@ for i in range(height):
 		else:
 			result1_img[i,j] = (0,0,0)
 
-cv2.imwrite("result1.jpg", result1_img)
+cv2.imwrite("hw2_result_images/result1.jpg", result1_img)
 #end of a1
 
 #a2
@@ -74,7 +74,7 @@ for i in range(height):
 		else:
 			result2_img[i,j] = (0,0,0)
 
-cv2.imwrite("result2.jpg", result2_img)
+cv2.imwrite("hw2_result_images/result2.jpg", result2_img)
 #end of a2
 
 #a3
@@ -179,4 +179,4 @@ for c in candidate_list:
 	else:
 		result3_img[c[0],c[1]] = (0,0,0)
 
-cv2.imwrite("result3.jpg", result3_img)
+cv2.imwrite("hw2_result_images/result3.jpg", result3_img)

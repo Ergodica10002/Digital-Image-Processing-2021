@@ -3,7 +3,7 @@ import cv2
 from matplotlib import pyplot as plt
 import math
 
-sample2_img = cv2.imread("sample2.jpg")
+sample2_img = cv2.imread("hw2_sample_images/sample2.jpg")
 img_info = sample2_img.shape
 height = img_info[0]
 width = img_info[1]
@@ -62,11 +62,11 @@ for i in range(height):
 		newval = transfer(val)
 		newattr = (newval, newval, newval)
 		sample2_hist[i,j] = np.uint8(newattr)   
-cv2.imwrite("sample2_transfer.jpg", sample2_hist)    		
+cv2.imwrite("hw2_result_images/sample2_transfer.jpg", sample2_hist)    		
 #end of transfer function
 
 #start of Canny edge detection
-sample2_hist = cv2.imread("sample2_hist.jpg")
+sample2_hist = cv2.imread("hw2_sample_images/sample2_hist.jpg")
 img_info = sample2_hist.shape
 height = img_info[0]
 width = img_info[1]
@@ -177,6 +177,6 @@ for c in candidate_list:
 		sample2_edge_map[c[0],c[1]] = (0,0,0)
         
 
-cv2.imwrite("sample2_edge_map.jpg", sample2_edge_map)
+cv2.imwrite("hw2_result_images/sample2_edge_map.jpg", sample2_edge_map)
 #end of Canny edge detection
 

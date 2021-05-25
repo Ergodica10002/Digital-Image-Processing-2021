@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-sample2_img = cv2.imread('sample2.jpg')
-sample3_img = cv2.imread('sample3.jpg')
-sample4_img = cv2.imread('sample4.jpg')
+sample2_img = cv2.imread('hw1_sample_images/sample2.jpg')
+sample3_img = cv2.imread('hw1_sample_images/sample3.jpg')
+sample4_img = cv2.imread('hw1_sample_images/sample4.jpg')
 
 imgInfo = sample2_img.shape
 height = imgInfo[0]
@@ -22,8 +22,8 @@ for i in range(0,height):
         newattr = (increase_val, increase_val, increase_val)
         increase_img[i,j] = np.uint8(newattr)
 
-cv2.imwrite('3_result.jpg', decrease_img)
-cv2.imwrite('4_result.jpg', increase_img)
+cv2.imwrite('hw1_result_images/3_result.jpg', decrease_img)
+cv2.imwrite('hw1_result_images/4_result.jpg', increase_img)
 
 X = range(0,256)
 sample2_Y = np.zeros(256)
@@ -123,8 +123,8 @@ plt.figure()
 plt.title('6_result.jpg')
 plt.plot(X, result6_Y)
 plt.show()
-cv2.imwrite('5_result.jpg', global_equal_img)
-cv2.imwrite('6_result.jpg', local_equal_img)
+cv2.imwrite('hw1_result_images/5_result.jpg', global_equal_img)
+cv2.imwrite('hw1_result_images/6_result.jpg', local_equal_img)
 
 
 imgInfo = sample4_img.shape
@@ -146,7 +146,7 @@ for i in range(0,height):
 		newattr = (newval, newval, newval)
 		result7_img[i,j] = np.uint8(newattr)
 
-cv2.imwrite('7_result.jpg', result7_img)
+cv2.imwrite('hw1_result_images/7_result.jpg', result7_img)
 
 X = range(0,256)
 sample4_Y = np.zeros(256)

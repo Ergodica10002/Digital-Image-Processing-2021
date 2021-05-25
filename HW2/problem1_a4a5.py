@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 import math
 
 #a4
-sample1_img = cv2.imread("sample1.jpg")
+sample1_img = cv2.imread("hw2_sample_images/sample1.jpg")
 img_info = sample1_img.shape
 height = img_info[0]
 width = img_info[1]
@@ -33,12 +33,12 @@ for i in range(height):
         G[i,j] = (newval, newval, newval)
 
 
-cv2.imwrite("result4.jpg", G)
+cv2.imwrite("hw2_result_images/result4.jpg", G)
 
 #finish edge crispening
 
 
-result4_img = cv2.imread("result4.jpg")
+result4_img = cv2.imread("hw2_sample_images/result4.jpg")
 img_info = result4_img.shape
 height = img_info[0]
 width = img_info[1]
@@ -139,5 +139,5 @@ for c in candidate_list:
 		result5_img[c[0],c[1]] = (0,0,0)
         
 
-cv2.imwrite("result5.jpg", result5_img)
+cv2.imwrite("hw2_result_images/result5.jpg", result5_img)
 #end of a4

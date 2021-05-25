@@ -3,8 +3,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 import math
 
-sample6_img = cv2.imread('sample6.jpg')
-sample7_img = cv2.imread('sample7.jpg')
+sample6_img = cv2.imread('hw1_sample_images/sample6.jpg')
+sample7_img = cv2.imread('hw1_sample_images/sample7.jpg')
 
 imgInfo = sample6_img.shape
 height = imgInfo[0]
@@ -80,7 +80,7 @@ for i in range(0,height):
 		newattr = (newval, newval, newval)
 		result8_img[i,j] = np.uint8(newattr)
 
-cv2.imwrite('8_result.jpg', result8_img)
+cv2.imwrite('hw1_result_images/8_result.jpg', result8_img)
 
 MSE = 0
 for i in range(0,height):
@@ -162,7 +162,7 @@ for i in range(0,height):
 		newattr = (PMED, PMED, PMED)
 		result9_img[i,j] = np.uint8(newattr)
 
-cv2.imwrite('9_result.jpg', result9_img)
+cv2.imwrite('hw1_result_images/9_result.jpg', result9_img)
 
 MSE = 0
 for i in range(0,height):
