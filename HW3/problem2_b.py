@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 import random
 
-sample2_img = cv2.imread("sample2.png", cv2.IMREAD_GRAYSCALE)
+sample2_img = cv2.imread("hw3_sample_images/sample2.png", cv2.IMREAD_GRAYSCALE)
 img_info = sample2_img.shape
 height = img_info[0]
 width = img_info[1]
 
-T = np.load("T.npy")
+T = np.load("hw3_result_images/T.npy")
 
 def dist(X, Y):
 	d = 0
@@ -105,7 +105,7 @@ for index in feature_set2:
 for index in feature_set3:
 	result_3[index[0], index[1]] = (172, 172, 249)
 
-cv2.imwrite("result3.png", result_3)
+cv2.imwrite("hw3_result_images/result3.png", result_3)
 
 
 

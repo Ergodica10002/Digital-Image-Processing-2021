@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-sample2_img = cv2.imread("sample2.png")
+sample2_img = cv2.imread("hw3_sample_images/sample2.png")
 img_info = sample2_img.shape
 height = img_info[0]
 width = img_info[1]
@@ -53,7 +53,7 @@ for feature in range(1, 10):
 	for i in range(height):
 		for j in range(width):
 			M[feature][i,j] = conv(sample2_img, H[feature], i, j)
-	cv2.imwrite("M_{}.png".format(feature), M[feature])
+	cv2.imwrite("hw3_result_images/M_{}.png".format(feature), M[feature])
 
 
 for i in range(10):
@@ -78,5 +78,5 @@ for feature in range(1, 10):
 					energy += int(M[feature][r,c])**2
 			T[feature][i,j] = energy**0.5
 
-np.save("T.npy", T)
+np.save("hw3_result_images/T.npy", T)
 

@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-sample1_img = cv2.imread("sample1.png")
+sample1_img = cv2.imread("hw3_sample_images/sample1.png")
 img_info = sample1_img.shape
 height = img_info[0]
 width = img_info[1]
@@ -51,7 +51,7 @@ for i in range(height):
 		else:
 			result1_img[i,j] = 255
 
-cv2.imwrite("result1.png", result1_img)
+cv2.imwrite("hw3_result_images/result1.png", result1_img)
 # end of 1a
 
 # start of 1b 
@@ -120,5 +120,5 @@ for i in range(height):
 		else:
 			result2_img[i,j] = 0
 
-cv2.imwrite("result2.png", result2_img)
+cv2.imwrite("hw3_result_images/result2.png", result2_img)
 # end of 1b

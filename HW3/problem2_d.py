@@ -4,12 +4,12 @@ import random
 
 problem_2c = True
 
-sample2_img = cv2.imread("sample2.png", cv2.IMREAD_GRAYSCALE)
+sample2_img = cv2.imread("hw3_sample_images/sample2.png", cv2.IMREAD_GRAYSCALE)
 img_info = sample2_img.shape
 height = img_info[0]
 width = img_info[1]
 
-T = np.load("T.npy")
+T = np.load("hw3_result_images/T.npy")
 
 def dist(X, Y):
 	d = 0
@@ -107,7 +107,7 @@ for it in range(500):
 		break
 
 
-sample3_img = cv2.imread("sample3.png", cv2.IMREAD_GRAYSCALE)
+sample3_img = cv2.imread("hw3_sample_images/sample3.png", cv2.IMREAD_GRAYSCALE)
 pattern_img_info = sample3_img.shape
 pattern_height = pattern_img_info[0]
 pattern_width = pattern_img_info[1]
@@ -126,6 +126,6 @@ for pixel in feature_set1:
 for pixel in feature_set2:
 	result_5[pixel[0],pixel[1]] = sample2_img[pixel[0], pixel[1]]
 
-cv2.imwrite("result5.png", result_5)
+cv2.imwrite("hw3_result_images/result5.png", result_5)
 
 

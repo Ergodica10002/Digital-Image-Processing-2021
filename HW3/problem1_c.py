@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-sample1_img = cv2.imread("sample1.png")
+sample1_img = cv2.imread("hw3_sample_images/sample1.png")
 img_info = sample1_img.shape
 height = img_info[0]
 width = img_info[1]
@@ -96,7 +96,7 @@ for i in range(height):
 '''
 # start of counting
 # To use definition 2, uncomment the following
-filling_img = cv2.imread("sample1.png", cv2.IMREAD_GRAYSCALE)
+filling_img = cv2.imread("hw3_sample_images/sample1.png", cv2.IMREAD_GRAYSCALE)
 
 count = 0
 for i in range(1, height-1):
